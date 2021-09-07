@@ -1,0 +1,76 @@
+.services {
+    display: flex;
+    flex-wrap: wrap;
+
+    .leftside {
+        width: 50%;
+        background-image: url('../img/services/services-classic.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+
+
+        img {
+            display: none;
+
+            @media (max-width: 900px) {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+
+    .rightside {
+        width: 50%;
+        padding: 100px 100px 70px 100px;
+        background-color: $servicesBgColor;
+
+        @media (max-width: 1100px) {
+            padding: 30px 30px 0 30px;
+        }
+
+        @media (max-width: 900px) {
+            width: 100%;
+        }
+
+        h3 {
+            @include fluid-type(20px, 40px);
+            color: $headerRightSideColor;
+            margin: 0 0 40px 0;
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -15px;
+
+
+            .box {
+                display: flex;
+                width: 50%;
+                padding: 0 15px;
+                margin: 0 0 30px 0;
+                @media (max-width: 500px) {
+                    width: 100%;
+                }
+                span {
+                    color: $boxTitleRightSideColor;
+                }
+
+                p {
+                    line-height: 20px;
+                    font-size: 15px;
+                }
+
+                .icon {
+                    font-size: 30px;
+                    margin: 0 30px 0 0;
+                }
+            }
+        }
+    }
+}

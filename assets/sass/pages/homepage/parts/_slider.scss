@@ -1,0 +1,60 @@
+.slider {
+    .item {
+        padding: 50px 0;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+
+            h1,
+            h2 {
+                color: $sliderTextColor;
+                @include fluid-type(30px, 70px);
+                width: 55%;
+                margin: 0 0 20px 0;
+
+                @media(max-width: 800px) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            p {
+                color: $sliderTextColor;
+                font-size: 16px;
+                width: 55%;
+                margin: 0;
+                line-height: 1.5;
+                letter-spacing: 0.5px;
+
+                @media(max-width: 800px) {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .owl-theme {
+        .owl-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .owl-dot {
+                outline: none;
+
+                &.active span {
+                    background-color: $sliderDotBgColor;
+                }
+            }
+
+        }
+    }
+}

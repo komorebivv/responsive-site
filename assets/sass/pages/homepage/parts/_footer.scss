@@ -1,0 +1,139 @@
+footer {
+    background-color: $FooterLightBgColor;
+
+    a {
+        color: $FooterTextColor;
+        transition: 0.4s;
+
+        &:hover {
+            color: $FooterLinkHover;
+        }
+    }
+
+    .lightFooter {
+        padding: 75px 0;
+        display: flex;
+    }
+
+    .item {
+        width: 25%;
+        padding-left: 45px;
+        padding-right: 15px;
+        border-right: 1px solid $FooterBorderColor;
+        font-size: 12px;
+        line-height: 1.5;
+
+        &:first-of-type {
+            padding-left: 0;
+        }
+
+
+        &:last-of-type {
+            border: none;
+        }
+
+        h6 {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            color: $FooterH6Color;
+            font-size: 13px;
+        }
+
+        &.socialMedia {
+            ul {
+                list-style-type: none;
+                display: flex;
+                padding: 0;
+                margin-top: 30px;
+
+
+                li {
+                    margin-right: 15px;
+
+                    a {
+                        color: $FooterIconColor;
+                        font-size: 15px;
+                        transition: 0.4s;
+
+                        &:hover {
+                            color: #ff214f;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        &.links {
+            a {
+
+                display: block;
+                line-height: 2;
+            }
+        }
+
+        &.contact {
+            line-height: 1.8;
+        }
+
+        &.instagram {
+
+            .portfolio {
+                display: flex;
+                flex-wrap: wrap;
+                padding-top: 10px;
+
+                .picture {
+                    width: calc(100%/3);
+                    padding: 0 10px 10px 0;
+
+
+                    a {
+                        position: relative;
+
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            height: 0;
+                            width: 100%;
+                            background-color: rgba(35, 35, 35, 0.8);
+                            bottom: 3px;
+                            left: 0;
+                            transition: 0.3s;
+                        }
+
+                        &:hover:before {
+                            color: white;
+                            content: "/f16d";
+                            text-align: center;
+                            height: 140%;
+                        }
+
+
+                    }
+
+                    img {
+                        width: 100%;
+
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    .darkFooter {
+        background-color: $FooterDarkBgColor;
+        padding: 50px 0;
+        font-size: 12px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+
+}

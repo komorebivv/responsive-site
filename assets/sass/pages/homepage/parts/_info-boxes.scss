@@ -1,0 +1,48 @@
+.info-boxes {
+    display: flex;
+    flex-wrap: wrap;
+
+    .box {
+        width: 25%;
+        padding: 50px;
+        border-right: 1px solid $infoBoxesBorderColor;
+        border-bottom: 1px solid $infoBoxesBorderColor;
+        text-align: center;
+
+        @media (max-width: 1000px) {
+            width: 50%;
+
+            &:nth-of-type(2n) {
+                border-right: none;
+            }
+        }
+
+        @media (max-width: 500px) {
+            width: 100%;
+
+            border-right: none;
+        }
+
+        &:last-of-type {
+            border-right: none;
+        }
+
+        i {
+            font-size: 50px;
+            color: $infoBoxesIconColor;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-weight: 700;
+            color: $infoBoxesTitleColor;
+            margin: 0 0 20px 0;
+        }
+
+        .description {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+body {
+    font-family: $generalFontFamily;
+    color: $fontColor
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $headerFontFamily;
+}
+
+a {
+    text-decoration: none;
+}
+
+.default-header {
+    text-align: center;
+
+    h5 {
+        color: $headersDefaultH5Color;
+        margin: 0 0 20px 0;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+
+    h2 {
+        color: $headersDefaultH2Color;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+        @include fluid-type(20px, 40px);
+    }
+}
